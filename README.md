@@ -22,7 +22,7 @@ polymer serve --open
 Using [`yarn`](https://github.com/hchiam/learning-yarn): (triple-click to select all)
 
 ```bash
-git clone https://github.com/hchiam/learning-polymer.git && cd learning-polymer && yarn && polymer serve --open;
+git clone https://github.com/hchiam/learning-polymer.git && cd learning-polymer && yarn && yarn dev;
 ```
 
 And if you don't already have the `polymer` CLI command installed:
