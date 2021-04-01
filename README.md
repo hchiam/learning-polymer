@@ -2,7 +2,7 @@
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
-Custom elements, custom tags. Shadow DOM for encapsulation. Events. Data. Etc.
+Custom elements, custom tags. Shadow DOM for encapsulation. Events. Data. Etc. `polymer-cli`
 
 <https://polymer-library.polymer-project.org/3.0/docs/first-element/intro>
 
