@@ -2,7 +2,7 @@
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
-Custom elements, custom tags. Shadow DOM for encapsulation. Events. Data. Etc. `polymer-cli`
+Custom elements, custom tags. Shadow DOM for encapsulation, liked _scoped_ CSS. Events. Data. Etc. `polymer-cli`
 
 <https://polymer-library.polymer-project.org/3.0/docs/first-element/intro>
 
@@ -32,3 +32,36 @@ npm install -g polymer-cli
 ```
 
 (`yarn global add polymer-cli` didn't seem to work for me.)
+
+## Notes
+
+```js
+import { PolymerElement, html } from "@polymer/polymer/polymer-element.js";
+import "@polymer/iron-icon/iron-icon.js"; // import other pre-made component
+
+class IconToggle extends PolymerElement {
+  static get template() {
+    return html`
+      <style>
+        /* shadow DOM styles go here */
+        span {
+          color: blue;
+        }
+        :host {
+          /* ":host" means the <icon-toggle> element itself */
+          display: inline-block;
+        }
+      </style>
+
+      <!-- shadow DOM goes here -->
+      <iron-icon icon="polymer"></iron-icon>
+    `;
+  }
+  constructor() {
+    super();
+  }
+}
+
+// define class IconToggle as <icon-toggle> custom HTML tag:
+customElements.define("icon-toggle", IconToggle);
+```
