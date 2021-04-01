@@ -11,20 +11,40 @@ class IconToggle extends PolymerElement {
         }
         iron-icon {
           /* <iron-icon> uses SVG: */
-          fill: rgba(0, 0, 0, 0);
-          stroke: currentcolor;
+          fill: var(--icon-toggle-color, rgba(0, 0, 0, 0));
+          stroke: var(--icon-toggle-outline-color, currentcolor);
         }
         :host([pressed]) iron-icon {
-          fill: currentcolor;
+          fill: var(--icon-toggle-pressed-color, currentcolor);
         }
       </style>
 
       <!-- shadow DOM goes here -->
-      <iron-icon icon="polymer"></iron-icon>
+      <iron-icon icon="[[toggleIcon]]"></iron-icon>
     `;
   }
+
+  static get properties() {
+    return {
+      toggleIcon: {
+        type: String,
+      },
+      pressed: {
+        type: Boolean,
+        value: false,
+        notify: true,
+        reflectToAttribute: true,
+      },
+    };
+  }
+
   constructor() {
     super();
+    this.addEventListener("click", this.toggle.bind(this));
+  }
+
+  toggle() {
+    this.pressed = !this.pressed;
   }
 }
 
