@@ -2,38 +2,33 @@
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
-https://polymer-library.polymer-project.org/3.0/docs/first-element/intro
+Custom elements, custom tags. Shadow DOM for encapsulation. Events. Data. Etc.
+
+<https://polymer-library.polymer-project.org/3.0/docs/first-element/intro>
 
 ## From scratch
 
-Using [`yarn`](https://github.com/hchiam/learning-yarn):
-
 ```bash
-yarn add 
+npm install -g polymer-cli
+git clone https://github.com/PolymerLabs/polymer-3-first-element.git
+cd polymer-3-first-element
+yarn # or npm install
+polymer serve --open
+# localhost:8081
 ```
 
-Or with `npm`:
-
-```bash
-npm install 
-```
-
-And then:
-
-```bash
-
-```
-
-## Starting by testing out this repo <!-- Replace "template"s and "# and then ..."s in this section -->
+## Starting by testing out this repo
 
 Using [`yarn`](https://github.com/hchiam/learning-yarn): (triple-click to select all)
 
 ```bash
-git clone https://github.com/hchiam/learning-template.git && cd learning-template && yarn; # and then ...
+git clone https://github.com/hchiam/learning-polymer.git && cd learning-polymer && yarn && polymer serve --open;
 ```
 
-Or with `npm`: (triple-click to select all)
+And if you don't already have the `polymer` CLI command installed:
 
 ```bash
-git clone https://github.com/hchiam/learning-template.git && cd learning-template && npm install; # and then ...
+npm install -g polymer-cli
 ```
+
+(`yarn global add polymer-cli` didn't seem to work for me.)
