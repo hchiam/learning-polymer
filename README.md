@@ -1,6 +1,6 @@
 # Learning Polymer
 
-Just one of the things I'm learning. <https://github.com/hchiam/learning>
+Just one of the things I'm learning. <https://github.com/hchiam/learning> and <https://github.com/hchiam/learning-frameworks>
 
 Custom elements, custom tags. Shadow DOM for encapsulation, liked _scoped_ CSS (and passing in CSS values via `var(--custom-value)`). Events. Data. Etc. `polymer-cli`
 
